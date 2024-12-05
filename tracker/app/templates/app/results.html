@@ -2,8 +2,12 @@
 
 {% block body %}
     <h1>howmuchtimedidiwaste.com</h1>
+    <div>You are {{ age }} years old, and are expected to live till the age of {{ life_expectancy }}</div>
     <div>You have {{ years_left }} years remaining.</div>
     <div>You have {{ hours_left }} hours remaining.</div>
     <div>Out of these hours remaining, you will waste {{ hours_wasted }} of them. </div>
     <div>Out of these years remaining, you will waste {{ years_wasted }} of them. </div>
+
+    <a href="{% url 'index' %}">Update</a>
+
 {% endblock %}
