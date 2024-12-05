@@ -1,0 +1,15 @@
+{% extends "app/layout.html" %}
+
+{% block body %}
+    <h1>howmuchtimedidiwaste.com</h1>
+    <form action="{% url 'calculate' %}" method="post">
+        {% csrf_token %}
+        Age:
+        <input type="text" name="age" placeholder="Age">
+        Time wasted daily:
+        <input type="text" name="time_spent" placeholder="Time">
+        Life Expectancy:
+        <input type="text" name="life_expectancy" placeholder="80">
+        <input type="submit" name="submit">
+    </form>
+{% endblock %}
